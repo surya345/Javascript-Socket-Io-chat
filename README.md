@@ -29,7 +29,7 @@ The Objective of this assignment is to work with Javascript on both client and s
 3. All your CSS code resides in the public/css folder  
 4. HTML, Javascript, CSS code should be well indented and commented  
 5. You shall use more of Bootstrap components like Cards, Alerts to style your elements  
-6. The Assignment should be pushed to gitlab on completion and submitted for Preliminary Automated Review as described below.  
+6. The Assignment should be pushed to gitlab once all the local test cases (npm run test) and eslint issues (npm run eslint) are resolved and submitted for Preliminary Automated Review (which shall validate the solution against more test cases) as described below.  
 
 ## Assignment
 

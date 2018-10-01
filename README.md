@@ -87,7 +87,25 @@ The Objective of this assignment is to work with Javascript on both client and s
    a. On receiving `register`, it emits `welcomeMessage` to sender, adds the socket to all the provided channels, emits `addedToChannel` to sender for every channel joined by them   
    b. On receiving `joinChannel`, it makes the socket join the channel and emits `addedToChannel` to sender  
    c. On receiving `leaveChannel`, it makes the socket leave the channel and emits `removedFromChannel` to sender  
-   d. On receiving `message`, it emits `newMessage` to all the clients joined to the provided channel excluding the sender of the message   
+   d. On receiving `message`, it emits `newMessage` to all the clients joined to the provided channel excluding the sender of the message  
+
+## Important Points for the Assignment
+
+In order to do the server side part of socket assignment:
+
+1) Take a look at https://socket.io/docs/server-api/#Socket for server side methods that you can use for joining or leaving a channel etc.
+
+2) In server.js the server side socket listening and emitting should happen strictly in the callback method of `register` socket event listener as shown below
+
+```
+socket.on('register', user => {
+  // The rest of the server side events like
+  // `message`, `joinChannel` etc 
+  // should be handled here
+});
+
+```
+
 
 ## Submitting your solution for preliminary automated review  
 

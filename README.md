@@ -95,7 +95,9 @@ In order to do the server side part of socket assignment:
 
 1) Take a look at https://socket.io/docs/server-api/#Socket for server side methods that you can use for joining or leaving a channel etc.
 
-2) In server.js the server side socket listening and emitting should happen strictly in the callback method of `register` socket event listener as shown below
+2) Do not use `jQuery` in script.js and server.js files. The jQuery used in index.html is purely for Bootstrap UI components (Modals). **Use only `Javascript`**
+
+3) In server.js the server side socket listening and emitting should happen strictly in the callback method of `register` socket event listener as shown below
 
 ```
 socket.on('register', user => {
